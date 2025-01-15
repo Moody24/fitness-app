@@ -3,6 +3,9 @@ const express = require("express");
 const cors = require("cors");
 const workoutRoutes = require("./routes/workouts");
 
+// Log the value of the FIREBASE_SERVICE_ACCOUNT environment variable
+console.log("Service Account Path:", process.env.FIREBASE_SERVICE_ACCOUNT);
+
 const app = express();
 
 // Middleware
