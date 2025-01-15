@@ -12,8 +12,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Default route for root URL
+app.get("/", (req, res) => {
+    res.send("Fitness Tracker Backend API is running!");
+  });
+
 // Routes
 app.use("/api/workouts", workoutRoutes);
+
 
 // Start server
 const PORT = process.env.PORT || 5000;
